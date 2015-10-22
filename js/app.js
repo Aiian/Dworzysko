@@ -2,19 +2,22 @@ $(document).ready(function(){
 
     $( ".event" ).hover(
         function() {
+            $currentIndex = $(this).css("zIndex");
             $(this).transition({ scale: [1.05] }).css("zIndex","4");
 
         }, function() {
-            $(this).transition({ scale: [1] }).css("zIndex","1");
+            $(this).transition({ scale: [1] }).css("zIndex",$currentIndex);
         }
     );
 
     $( ".localNav li" ).hover(
         function() {
-            $(this).css("borderBottom","4px solid rgb(207,169,112)")
+            $(this).css("borderBottom","2px solid rgb(207,169,112)");
+            $(this).css("cursor","hand");
 
         }, function() {
-            $(this).css("borderBottom","4px solid transparent")
+            $(this).css("borderBottom","2px solid transparent");
+            $(this).css("cursor","normal");
         }
     );
 
@@ -40,6 +43,7 @@ $(document).ready(function(){
                     $(".nav").fadeIn(2000);
                     $(".lower").fadeIn(2000);
                     $(".localNav").fadeIn(2000);
+
                 });
 
             $current.transition({scale: [1.]});
@@ -56,11 +60,12 @@ $(document).ready(function(){
             mouseleave: function () {
                 $(this).transition({scale: [1.]})
             }
-        });
+    });
 
-
-
-
+    $(".localNav li").on("click",
+        function(){
+            $(".localContent").slideDown(2000);
+    })
 
 
 

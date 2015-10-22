@@ -69,7 +69,8 @@ body {
   z-index: 1;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  justify-content: flex-end; }
   .jumbo:nth-child(2) {
     background-image: url("../images/pic1.jpg");
     background-position: right; }
@@ -78,15 +79,25 @@ body {
   .jumbo:nth-child(4) {
     background-image: url("../images/pic3.JPG"); }
   .jumbo .localNav {
-    background-color: rgba(245, 245, 245, 0.8);
-    width: 100%;
-    height: 5%;
+    background-color: rgba(245, 245, 245, 0.7);
+    width: 10%;
+    height: 40%;
     justify-content: space-around;
     align-items: center;
     font-weight: bold;
     display: none; }
     .jumbo .localNav li {
-      border-bottom: 4px solid transparent; }
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.1em; }
+  .jumbo .localContentContainer {
+    width: 90%;
+    height: 100%;
+    justify-content: center; }
+  .jumbo .localContent {
+    display: none;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.7); }
 
 .lower {
   width: 100%;
@@ -121,17 +132,24 @@ body {
       height: 100%;
       justify-content: space-around;
       align-items: center;
-      width: 85%; }
+      width: 85%;
+      overflow: visible; }
       .lower .eveCal .gallery .event {
         height: 75%;
-        width: 25%;
+        width: 31%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         box-shadow: 10px 10px 30px -10px rgba(0, 0, 0, 0.75);
         align-items: flex-end;
         padding: 0;
-        position: relative; }
+        position: relative;
+        display: inline-table;
+        border-right: 1px solid white; }
+        .lower .eveCal .gallery .event .caption {
+          align-items: flex-end;
+          width: 100%;
+          height: 100%; }
         .lower .eveCal .gallery .event h3 {
           background-color: rgba(245, 245, 245, 0.7);
           font-size: 1.1em;
@@ -142,22 +160,22 @@ body {
         .lower .eveCal .gallery .event:nth-child(1) {
           background-image: url("../images/wesele.jpg");
           left: 0;
-          bottom: 5px;
+          bottom: 0;
           z-index: 4; }
         .lower .eveCal .gallery .event:nth-child(2) {
           background-image: url("../images/spiz.jpg");
-          left: 60px;
-          bottom: -5px;
+          left: -8%;
+          bottom: 0;
           z-index: 3; }
         .lower .eveCal .gallery .event:nth-child(3) {
           background-image: url("../images/gotowanie.jpg");
-          left: 45px;
-          bottom: 5px;
+          left: -16%;
+          bottom: 0;
           z-index: 2; }
         .lower .eveCal .gallery .event:nth-child(4) {
           background-image: url("../images/menu.jpg");
-          bottom: -5px;
-          left: 0;
+          bottom: 0;
+          left: -24%;
           z-index: 1; }
 
 /*# sourceMappingURL=style.css.map */
